@@ -1,0 +1,36 @@
+@keyframes ainationCarousel {
+    0% {
+        transform: translateY(-100%);
+        .btn {
+            opacity: 0;
+            margin-top: -30px;
+        }
+    }
+    50% {
+        .btn {
+            margin-top: -20px;
+            opacity: 0.5;
+        }
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ainationCarouselbtn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.1;
+        transform: translateY(0);
+    }
+}

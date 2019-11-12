@@ -1,0 +1,111 @@
+.products {
+    background-color: $color-black-2;
+    .nav {
+        justify-content: center;
+        border: none;
+        .nav-item {
+            .nav-link {
+                @include styleText($color-white-1, $fs-1, $fw-bold-1);
+                border: none;
+                position: relative;
+                padding-left: 0;
+                padding-bottom: 10px;
+                margin-right: 15px;
+                transition: 0.4s;
+                margin-bottom: 15px;
+                &.active {
+                    color: $color-blue-1;
+                    background-color: transparent;
+                    &::after {
+                        width: 80%;
+                    }
+                }
+                &:hover {
+                    color: $color-blue-1;
+                }
+                i {
+                    margin-right: 10px;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    top: 100%;
+                    left: 0;
+                    background-color: $color-blue-1;
+                }
+            }
+        }
+    }
+    #products__tab {
+        .tab-pane {
+            .products__content {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 2px;
+                padding-bottom: 2rem;
+                .products__item {
+                    position: relative;
+                    &:hover .products__text {
+                        padding-bottom: 3rem;
+                        .products__texthiddent {
+                            opacity: 1;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .products__text {
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            padding: 1rem;
+                            background-color: rgba($color: #000000, $alpha: .5);
+                            transition: all .8s;
+                            .products__textshow {
+                                @include styleText($color-white-1, $fs-2, $fw-bold-1);
+                                transition: all.5s;
+                            }
+                            .products__texthiddent {
+                                @include styleText($color-white-4, $fs-1, normal);
+                                opacity: 0;
+                                transition: all.5s;
+                            }
+                        }
+                    }
+                }
+                .products__big {
+                    grid-column: span 2;
+                    grid-row: span 2;
+                }
+                .products__itemhidden {
+                    display: none;
+                }
+            }
+            .button__hidden {
+                margin-left: 50%;
+                position: relative;
+                button {
+                    position: absolute;
+                    transform: translateX(-50%);
+                    padding: .3rem 1rem;
+                    @include styleButton($color-white-4, $fs-0, normal, $color-black-3, $border-radius-1, $border-radius-1, transparent);
+                    &:hover>* {
+                        color: $color-white-1;
+                    }
+                    &>* {
+                        transition: all.5s;
+                    }
+                    i {
+                        padding-right: .3rem;
+                    }
+                }
+            }
+        }
+    }
+}

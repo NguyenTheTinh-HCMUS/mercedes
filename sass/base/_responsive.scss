@@ -1,0 +1,73 @@
+.responsive__content-lg {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.responsive__productsbig-lg {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+}
+
+.responsive__content-md {
+    grid-template-columns: repeat(1, 1fr) !important;
+}
+
+.responsive_productstext-md {
+    // top: 100% !important;
+    position: relative !important;
+    background-color: $color-black-2 !important;
+    z-index: 100;
+    .products__textshow {
+        @include styleText($color-white-1, $fs-2, $fw-bold-1);
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+    .products__texthiddent {
+        @include styleText($color-white-4, $fs-1, normal);
+        opacity: 0;
+    }
+}
+
+.responsive_footergroupmedia {
+    justify-content: flex-start !important;
+}
+
+.responsive_footermediaitem {
+    width: 12.5%;
+}
+
+.responsive_captionCarousel {
+    position: relative !important;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    padding-top: 3rem;
+    animation-name: ainationCarousel;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    &::before {
+        content: '';
+        width: 80px;
+        height: 2px;
+        background: $color-black-1;
+        position: absolute;
+        bottom: 80%;
+        left: 0;
+        z-index: 100;
+    }
+    h2 {
+        padding-top: 1rem;
+        padding-left: 0;
+        width: 400px;
+        color: $color-black-1;
+        text-align: left;
+    }
+    a.btn.btn-dark {
+        @include styleButton($color-white-5, $fs-0, normal, $color-black-3, $border-radius-1, $border-radius-1, transparent);
+        transition: all .5s;
+        display: block;
+        margin-top: 1rem;
+        width: 30%;
+        &:hover {
+            background-color: $color-black-2;
+        }
+    }
+}

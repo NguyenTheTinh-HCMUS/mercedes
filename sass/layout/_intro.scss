@@ -1,0 +1,22 @@
+.intro {
+    background-color: $color-black-2;
+    @include styleText($color-white-1, $fs-1, normal);
+    padding: 2rem 0;
+    .container__intro {
+        padding: 0 3rem;
+        .intro__header {
+            padding: 2rem 0;
+            display: flex;
+            flex-flow: row wrap;
+            .intro__headeritem {
+                padding-right: 1rem;
+            }
+        }
+        .intro__text {
+            p {
+                margin: 0;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}

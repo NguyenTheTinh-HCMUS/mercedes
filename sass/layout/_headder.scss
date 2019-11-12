@@ -1,0 +1,42 @@
+header {
+    background-color: $color-black-2;
+    .header__control {
+        display: flex;
+        justify-content: flex-end;
+        .header__item {
+            margin: 0 10px;
+            &:hover a {
+                color: $color-blue-1;
+            }
+            a {
+                @include styleText($color-white-1, $fs-0, normal);
+                text-decoration: none;
+                transition: all .3s;
+            }
+        }
+    }
+    .header__navbar {
+        .navbar {
+            padding-right: 0;
+            .navbar-brand {
+                img {
+                    margin-right: 30px;
+                }
+            }
+            .navbar-collapse {
+                justify-content: flex-end!important;
+                .nav-item {
+                    margin-left: 20px;
+                    text-align: center;
+                    &:hover a {
+                        color: $color-blue-1;
+                    }
+                }
+                a {
+                    @include styleText($color-white-1, $fs-0, $fw-bold-0);
+                    transition: all .2s;
+                }
+            }
+        }
+    }
+}

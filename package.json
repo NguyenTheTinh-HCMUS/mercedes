@@ -1,0 +1,14 @@
+{
+    "name": "mese",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sasstocss": "node-sass sass/main.scss css/index.css -w"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^4.13.0"
+    }
+}
